@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/root/codingStudyGroup/2024_12_14",
-      "program": "/root/codingStudyGroup/2024_12_14/build/Debug/outDebug",
+      "cwd": "/workspaces/codingStudyGroup/cs106l",
+      "program": "/workspaces/codingStudyGroup/cs106l/build/Release/outRelease",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
