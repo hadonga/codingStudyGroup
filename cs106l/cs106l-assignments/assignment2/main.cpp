@@ -53,16 +53,25 @@ std::set<std::string> get_applicants(std::string filename) {
  */
 
 std::queue<const std::string*> find_matches(std::string name, std::set<std::string>& students) {
-  // STUDENT TODO: Implement this function.
-  
-  
+  // STUDENT TODO: Implement this function.  
   std::queue<const std::string*> matches;
-
-  for (const auto& student : students){
-    
+  std::string initials;
+  for (int i = 0; i < name.length(); i++){
+    if (i == 0 || name[i-1] == ' '){
+      initials += name[i];
+    }
   }
-
-
+  for (const auto& student : students){
+    std::string curr;
+    for (int i = 0; i < student.length(); i++){
+      if (i == 0 || student[i-1] == ' '){
+        curr += student[i];
+      }
+    }
+    if (curr == initials){
+      matches.push(&student);
+    }
+  }
   return matches;
 }
 
