@@ -1,7 +1,7 @@
 
 // header file defines the interface for the StanfordID class
-
-#include "string"
+#include <iostream>
+#include <string>
 
 // the only difference between struct and class in C++ is the default access specifier.
 // struct is a class where members are public by default.
@@ -15,9 +15,9 @@
 
 class StanfordID {
   private:
-    std::string name;
-    std::string sunet;
-    int idNumber;
+    std::string name_;
+    std::string sunet_;
+    int idNumber_;
 
   public:
     StanfordID(); //default constructor declaration
@@ -34,17 +34,17 @@ public:
 
 class Circle : public Shape {
 public:
-  Circle(double radius) : _radius(radius) {};
+  Circle(double radius) : radius_(radius) {};
   // 上述写法 member initializer list更加高效，推荐使用。 
   // Circle(double radius){
-  //   this->_radius = radius;
+  //   radius_ = radius;
   // }
 
   double area() const {
-    return 3.14159 * _radius * _radius;
+    return 3.14159 * radius_ * radius_;
   }
 private:
-  double _radius;
+  double radius_;
 };
 
 class Rectangle : public Shape {

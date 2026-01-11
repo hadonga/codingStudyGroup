@@ -5,19 +5,19 @@
 //default constructor
 // compiler will know to call this when no arguments are provided
 StanfordID::StanfordID(){
-  name = "Unknown";
-  sunet = "unknown";
-  idNumber = 0;
+  name_ = "Unknown";
+  sunet_ = "unknown";
+  idNumber_ = 0;
 }
 
 //parameterized constructor
 StanfordID::StanfordID(std::string name, std::string sunet, int idNumber){
-  this->name = name;
-  this->sunet = sunet;
+  name_ = name;
+  sunet_ = sunet;
   if (idNumber > 0) {
-    this->idNumber = idNumber;
+    idNumber_ = idNumber;
   } else {
-    this->idNumber = -1; // invalid ID
+    idNumber_ = -1; // invalid ID
   }
 }
 
@@ -27,21 +27,21 @@ StanfordID::StanfordID(std::string name, std::string sunet, int idNumber){
 // 必须使用 this 来明确指定访问的是成员变量；否则，编译器会优先解析为局部变量，导致错误。
 
 std::string StanfordID::getName(){
-  return this->name;
+  return name_;
 }
 
 std::string StanfordID::getSunet(){
-  return this->sunet;
+  return sunet_;
 }
 
 int StanfordID::getID(){
-  return this->idNumber;
+  return idNumber_;
 } 
 
 
 int main(){
   StanfordID t1; // calls default constructor
-  StanfordID t2("Alice Smith", "asmith", 123456); // calls
+  StanfordID t2("Alice Smith", "asmith", 123456); // calls 
   std::string t2_name = t2.getName();
   std::string t2_sunet = t2.getSunet();
   int t2_id = t2.getID(); 

@@ -122,5 +122,9 @@ int main(){
             std::cout << "Projectile vx: " << proj->getVx() << ", vy: " << proj->getVy() << ", vz: " << proj->getVz() << std::endl;
         }
     }
+
+    int a = 1, b = 2 ; 
+    int* pa = &a, pb  = &b;
+    std::cout << "a: " << a << ", *pb: " << pb << std::endl;
         return 0;
-}
+} 
